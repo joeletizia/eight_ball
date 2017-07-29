@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1>Welcome to 8 Ball!</h1>
+  <p class="lead">Magically predict what track your train will appear on.</p>
+</div>
+
+<h4>Find Your Train</h4>
+<form class='form-inline'>
+  <div class="form-group">
+    <input type="number" class="form-control" placeholder="Train # (3350)">
+  </div>
+  <button type="submit" class="btn btn-primary">Predict</button>
+</form>
