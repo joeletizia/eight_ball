@@ -45,3 +45,8 @@ config :logger, :console, format: "[$level] $message\n"
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
+
+config :eight_ball_data, EightBallData.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "nj_transit",
+  hostname: "localhost"

@@ -14,17 +14,17 @@ exports.config = {
       joinTo: "js/app.js"
     }
   },
-conventions: {
+  conventions: {
     assets: /^(web\/static\/assets)/
   },
-// Phoenix paths configuration
+  // Phoenix paths configuration
   paths: {
     // Dependencies and current project directories to watch
     watched: [
       "web/static",
       "test/static"
     ],
-// Where to compile files to
+    // Where to compile files to
     public: "priv/static"
   },
 

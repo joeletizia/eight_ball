@@ -1,0 +1,5 @@
+<h1>Predictions for Train <%= @train_number %></h1>
+
+<%= for entry <- @data do %>
+  <h4>Track <%= entry.track_id %>: <%= entry.percentage * 100 %>%</h3>
+<% end %>

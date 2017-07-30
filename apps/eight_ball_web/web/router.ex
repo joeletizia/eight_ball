@@ -17,6 +17,7 @@ defmodule EightBallWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/query/", QueryController, :handle_query
   end
 
   # Other scopes may use custom stacks.
