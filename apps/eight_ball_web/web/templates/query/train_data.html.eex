@@ -1,5 +1,8 @@
 <h1>Predictions for Train <%= @train_number %></h1>
+<% [top_result|tail] = @data %>
 
-<%= for entry <- @data do %>
+<h2> Most Likely Track <%= top_result.track_id %> (<%= top_result.percentage * 100 %>%) </h2>
+
+<%= for entry <- tail do %>
   <h4>Track <%= entry.track_id %>: <%= entry.percentage * 100 %>%</h3>
 <% end %>

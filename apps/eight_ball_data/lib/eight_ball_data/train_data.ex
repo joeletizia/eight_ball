@@ -8,6 +8,7 @@ defmodule EightBallData.TrainData do
   def retrieve_by_train_number(train_number) do
     train_records(train_number)
     |> build_percentages
+    |> order_by_percentage
   end
 
   defp train_records(train_number) do
@@ -22,6 +23,10 @@ defmodule EightBallData.TrainData do
   defp build_percentages(records) do
     total = total_number_of_trains(records)
     Enum.map(records, &(convert_record_into_struct(&1, total)))
+  end
+
+  defp order_by_percentage(records) do 
+    Enum.sort(records, fn(x,y) -> x.percentage > y.percentage end) 
   end
 
   defp convert_record_into_struct(record, total) do
